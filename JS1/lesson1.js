@@ -1,62 +1,107 @@
-"use-strict"
+"use-strict";
 //задание №1
-let tF = null, tC = null;
-tC = prompt("Введитетемпературу в градусах Цельсия", "0");
-tF = (9 / 5) * tC + 32;
-alert("Температура в градусах Фарингейта " + tF);
+for(let i = 0; i <=10; i++){
+    if(i == 0){
+        console.log(i + " - это ноль");
+    }
+    else if(i % 2 == 0){
+        console.log(i + " - четное число");
+    }
+    else {
+        console.log(i + " - нечётное число");
+    }
+}
+
 
 //задание №2
-let admin = null, name = null;
-name = "Василий";
-admin = name;
-alert(admin);
+const post = {
+    author: "John", //вывести этот текст
+    postId: 23,
+    comments: [
+        {
+            userId: 10,
+            userName: "Alex",
+            text: "lorem ipsum",
+            rating: {
+                likes: 10,
+                dislikes: 2 //вывести это число
+            }
+        },
+        {
+            userId: 5, //вывести это число
+            userName: "Jane",
+            text: "lorem ipsum 2", //вывести этот текст
+            rating: {
+                likes: 3,
+                dislikes: 1
+            }
+        },
+    ]
+};
+console.log(post.author);
+console.log(post.comments[0].rating.dislikes);
+console.log(post.comments[1].userId);
+console.log(post.comments[1].text);
+
 
 //задание №3
-let result = null;
+const products = [
+    {
+        id: 3,
+        price: 200,
+    },
+    {
+        id: 4,
+        price: 900,
+    },
+    {
+        id: 1,
+        price: 1000,
+    },
+];
+products.forEach(element => {
+    element.price *= 0.85;
+});
 
-/*
-1. складываем числа 10 и 10, получаем 20
-2. складываем число 20 и строку "10". Конкатенацией получаем "2010"
-3. "2010" присваиваем в переменную result
-4. с помощью console.log выводим result в консоль
-*/
-result = 10 + 10 + "10";
-console.log(result);
 
-/*
-1. складываем число 10 и строку "10". Конкатенацией получаем "1010"
-2. складываем строку "1010" и число 10. Конкатенацией получаем "101010"
-3. "101010" присваиваем в переменную result
-4. с помощью console.log выводим result в консоль
-*/
-result = 10 + "10" + 10;
-console.log(result);
+//задание №4
+const products = [
+    {
+        id: 3,
+        price: 127,
+        photos: [
+            "1.jpg",
+            "2.jpg",
+        ]
+    },
+    {
+        id: 5,
+        price: 499,
+        photos: []
+    },
+    {
+        id: 10,
+        price: 26,
+        photos: [
+            "3.jpg"
+        ]
+    },
+    {
+        id: 8,
+        price: 78,
+    },
+];
+let productsWithImg = products.filter(function(element){
+    if(element.photos != null || element.photos != undefined) return element;
+})
+productsWithImg.sort( (a, b) => a.price - b.price);
 
-/*
-1. сначала выполняется унарный плюс, приводя строку "10" к числу 10
-2. складываем числа 10 и 10, получаем 20
-3. складываем числа 20 и 10, получаем 30
-4. 30 присваиваем в переменную result
-5. с помощью console.log выводим result в консоль
-*/
-result = 10 + 10 + +"10";
-console.log(result);
 
-/*
-1. сначала выполняется унарный минус, приводя пустую строку "" к числу -0
-2. 10 делим на -0, получаем -Infinity
-3. -Infinity присваиваем в переменную result
-4. с помощью console.log выводим result в консоль
-*/
-result = 10 / -"";
-console.log(result);
+//задание №5
+for(let i = 0; i < 10; console.log(i++)){}
 
-/*
-1. сначала выполняется унарный плюс, но строку невозможно преобразовать к определённому
-числу, т.к. стоит символ запятой, а не точки. Результат NaN.
-2. 10 делим на NaN, получаем NaN
-3. NaN присваиваем в переменную result
-4. с помощью console.log выводим result в консоль
-*/
-result = 10 / +"2,5";
-console.log(result);
+
+//задание №6
+for(let i = 0, strX = ""; i < 20; i++){
+    console.log(strX += "x");
+}
