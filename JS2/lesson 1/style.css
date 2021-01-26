@@ -1,0 +1,31 @@
+header{
+    background-color: rgb(99, 201, 121);
+}
+button{
+    margin: 15px;
+    font-family: fantasy;
+}
+main{
+    max-width: 800px;
+}
+.goods-list{
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.goods-item{
+    width: 160px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid rgb(72, 135, 177);
+    border-radius: 8px;
+    box-shadow: 3px 3px rgb(180, 180, 180);
+}
+.goods-item h3{
+    font-family: sans-serif;
+}
+.goods-item p{
+    text-align: right;
+}
