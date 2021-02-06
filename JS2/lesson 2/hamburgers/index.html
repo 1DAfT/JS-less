@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Hamburgers</title>
+</head>
+
+<body>
+    <div class="order-box-border">
+        <div class="logo">
+            <p><i class="fas fa-hamburger"></i> ХАМ-бургер</p>
+        </div>
+        <div class="order-box">
+            <header>
+                <div class="price"></div>
+                <div class="calorie"></div>
+                <div class="order-button">Заказать</div>
+            </header>
+            <main>
+                <div class="size">
+                    <div>
+                        <input type="radio" name="size-choice" id="sizeChoice1" checked>
+                        <label for="sizeChoice1">Маленький</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="size-choice" id="sizeChoice2">
+                        <label for="sizeChoice2">Большой</label>
+                    </div>
+                </div>
+                <div class="filling">
+                    <div>
+                        <input type="radio" name="filling-choice" id="fillingChoice1" checked>
+                        <label for="fillingChoice1">Сыр</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="filling-choice" id="fillingChoice2">
+                        <label for="fillingChoice2">Салат</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="filling-choice" id="fillingChoice3">
+                        <label for="fillingChoice3">Картофель</label>
+                    </div>
+                </div>
+                <div class="extra">
+                    <div>
+                        <input type="checkbox" name="extra-choice" id="extraChoice1">
+                        <label for="extraChoice1">Приправа</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="extra-choice" id="extraChoice2">
+                        <label for="extraChoice2">Майонез</label>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/7b8a94b28c.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
